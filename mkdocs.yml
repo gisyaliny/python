@@ -96,6 +96,7 @@ nav:
       - Ch3 Tuple, List and Dictionary: "Foundation/Ch3-Tuple-List-And-Dictionary.ipynb"
       - Ch5 Functions: "Foundation/Ch5-Functions.ipynb"
       - Ch6 Classes and Objects: "Foundation/Ch6-Classes-And-Objects.ipynb"
+      - Ch7 Error and Exception Handling: "Foundation/Ch7-Error-Exception-Handling.ipynb"
     - PostSQL:
       - 01-Connect PostDB: "PostSQL/01_geo_database.ipynb"
       - 02-SQL Basic: "PostSQL/02_SQL_in_Notebook.ipynb"
@@ -108,6 +109,8 @@ nav:
       - Hexagon Shift: "Geoprocessing/Hexagon_shift.ipynb"
     - PyTest:
       - 01-Unit-Test: "PyTest/01-Python-Unit-Test.ipynb"
+      - 02 PyTest Get started: "PyTest/02-Pytest-get-started.ipynb"
+      - 03 PyTest Write and Report: "PyTest/03-Pytest-write-and-report-assertions.ipynb"
     - Django:
       - Web application and Tech:
         - Certificate: "Django/01-Web-Application-Technologies-and-Django/Certificate.pdf"
