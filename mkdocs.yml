@@ -90,7 +90,16 @@ plugins:
           #   execute: True
 
 nav:
-    - Home: index.md
+    - Home: README.md
     - Foundation:
       - Ch2 Variables: "Foundation/Ch2-Variable-In-Python.ipynb"
-      - Ch3 Tuple,List and Dictionary: "Foundation/Ch3-Tuple-List-And-Dictionary.ipynb"
+      - Ch3 Tuple, List and Dictionary: "Foundation/Ch3-Tuple-List-And-Dictionary.ipynb"
+      - Ch5 Functions: "Foundation/Ch5-Functions.ipynb"
+      - Ch6 Classes and Objects: "Foundation/Ch6-Classes-And-Objects.ipynb"
+    - PostSQL:
+      - 01-Connect PostDB: "PostSQL/01_geo_database.ipynb"
+      - 02-SQL Basic: "PostSQL/02_SQL_in_Notebook.ipynb"
+      - 03-Spatial function in PostGIS: "PostSQL/03_Spatial_Function_PostGIS.ipynb"
+      - 04-Spatial relationship query: "PostSQL/04-Spatial-Relationships.ipynb"
+      - 05-Projecting data: "PostSQL/05-Projecting-Data.ipynb"
+      - 06-Geopandas: "PostSQL/06-geopandas.ipynb"
