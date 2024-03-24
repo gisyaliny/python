@@ -105,3 +105,5 @@ nav:
       - 06-Geopandas: "PostSQL/06-geopandas.ipynb"
     - Geoprocessing:
       - Optimal Tessellation: "Geoprocessing/Optimize-GSS-with-tessellation.ipynb"
+    - PyTest:
+      - 01-Unit-Test: "PyTest/01-Python-Unit-Test.ipynb"
