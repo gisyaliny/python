@@ -111,6 +111,9 @@ nav:
       - 01-Unit-Test: "PyTest/01-Python-Unit-Test.ipynb"
       - 02 PyTest Get started: "PyTest/02-Pytest-get-started.ipynb"
       - 03 PyTest Write and Report: "PyTest/03-Pytest-write-and-report-assertions.ipynb"
+      - 04 PyTest Fixture: "PyTest/04-Pytest-use-fixtures.ipynb"
+      - 05 PyTest Mark and Parameterize: "PyTest/05-Pytest-Parameterize-Mark.ipynb"
+      - 06 PyTest Mocking: "PyTest/06-Pytest-Mocking.ipynb"
     - Django:
       - Web application and Tech:
         - Certificate: "Django/01-Web-Application-Technologies-and-Django/Certificate.pdf"
