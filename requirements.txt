@@ -13,6 +13,7 @@ twine
 watchdog
 wheel
 mkdocs
+mkdocs-pdf
 mkdocs-git-revision-date-plugin 
 mkdocs-git-revision-date-localized-plugin
 mkdocs-jupyter 

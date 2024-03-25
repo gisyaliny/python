@@ -13,7 +13,7 @@ theme:
     language: en
     palette:
         - scheme: default
-          #   primary: blue
+          primary: gray
           accent: indigo
           toggle:
               icon: material/toggle-switch-off-outline
@@ -30,10 +30,10 @@ theme:
     features:
         - navigation.instant
         - navigation.tracking
-        - navigation.top
+        # - navigation.top
         # - toc.integrate
         - navigation.tabs
-        - navigation.sections
+        # - navigation.sections
         - search.highlight
         - search.share
     # custom_dir: "docs/overrides"
@@ -81,7 +81,7 @@ plugins:
     - git-revision-date-localized:
           enable_creation_date: true
           type: timeago
-    # - pdf-export
+    - mkdocs-pdf
     - mkdocs-jupyter:
           include_source: True
           ignore_h1_titles: True
@@ -115,7 +115,7 @@ nav:
       - 05 PyTest Mark and Parameterize: "PyTest/05-Pytest-Parameterize-Mark.ipynb"
       - 06 PyTest Mocking: "PyTest/06-Pytest-Mocking.ipynb"
     - Web application and Tech:
-      - Certificate: "Django/01-Web-Application-Technologies-and-Django/Certificate.pdf"
+      - Certificate: "Django/01-Web-Application-Technologies-and-Django/Certificate.ipynb"
       - Week 1 Lecture: "Django/01-Web-Application-Technologies-and-Django/Week1/Lecture01.pdf"
       - Week 1 Notes: "Django/01-Web-Application-Technologies-and-Django/Week1/Week1.ipynb"
       - Week 1 Django Intro: "Django/01-Web-Application-Technologies-and-Django/Week1/Week1-Intro-Django.pdf"
@@ -133,7 +133,7 @@ nav:
       - Week 5 Lecture: "Django/01-Web-Application-Technologies-and-Django/Week5/Week5-SQL.pdf"
       - Week 5 Quiz: "Django/01-Web-Application-Technologies-and-Django/Week5/Quiz5.pdf"
     - Django:
-      - Certificate: "Django/02-Building-Web-Applications-in-Django/Certificate.pdf"
+      - Certificate: "Django/02-Building-Web-Applications-in-Django/Certificate.ipynb"
       - Week 1 Lecture: "Django/02-Building-Web-Applications-in-Django/Week1/Week1-1.pdf"
       - Week 1 Lecture 02: "Django/02-Building-Web-Applications-in-Django/Week1/Week1-2.pdf"
       - Week 1 Lecture 03: "Django/02-Building-Web-Applications-in-Django/Week1/Writing-your-first-Django-app-part-2.pdf"
