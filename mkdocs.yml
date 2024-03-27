@@ -149,6 +149,8 @@ nav:
       - Week 3 Quiz: "Django/02-Building-Web-Applications-in-Django/Week3/Quiz3.pdf"
       - Week 4 Lecture: "Django/02-Building-Web-Applications-in-Django/Week4/Writing-your-first-Django-app-part4.pdf"
       - Week 4 Quiz: "Django/02-Building-Web-Applications-in-Django/Week4/Quiz4.pdf"
+    - Streamlit:
+      - APP: "https://gisyaliny.streamlit.app/"
     - Algorithm:
       - Certificate: "Tree-and-Graph/Certificate.ipynb"
       - W1-Binary Tree And RedBlack Tree: "Tree-and-Graph/Week1-Binary-Tree-And-RedBlack-Tree.ipynb"
