@@ -99,6 +99,7 @@ nav:
       - Ch7 Error and Exception Handling: "Foundation/Ch7-Error-Exception-Handling.ipynb"
       - Ch7 Magic Functions: "Foundation/Ch8-Special-functions.ipynb"
     - PostSQL:
+      - 00-SQL Basic: "PostSQL/01-sql-comprehensive.ipynb"
       - 01-Connect PostDB: "PostSQL/01_geo_database.ipynb"
       - 02-SQL Basic: "PostSQL/02_SQL_in_Notebook.ipynb"
       - 03-Spatial function in PostGIS: "PostSQL/03_Spatial_Function_PostGIS.ipynb"
