@@ -108,6 +108,8 @@ nav:
       - 06-Geopandas: "PostSQL/06-geopandas.ipynb"
       - Certificate: "PostSQL/Certificate.ipynb"
     - Geoprocessing:
+      - 01 Arcpy Intro: "Geoprocessing/01-Arcpy-get-start.ipynb"
+      - 02 Data Manipulation: "Geoprocessing/02-Data-Manipulation.ipynb"
       - Optimal Tessellation: "Geoprocessing/Optimize-GSS-with-tessellation.ipynb"
       - Hexagon Shift: "Geoprocessing/Hexagon_shift.ipynb"
     - PyTest:
