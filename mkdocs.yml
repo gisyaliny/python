@@ -139,6 +139,7 @@ nav:
       - Week 5 Quiz: "Django/01-Web-Application-Technologies-and-Django/Week5/Quiz5.pdf"
     - Django:
       - Certificate: "Django/02-Building-Web-Applications-in-Django/Certificate.ipynb"
+      - MVC and ORM: "Django/03-Django-Oracle/01-MVC-And-ORM.ipynb"
       - Week 1 Lecture: "Django/02-Building-Web-Applications-in-Django/Week1/Week1-1.pdf"
       - Week 1 Lecture 02: "Django/02-Building-Web-Applications-in-Django/Week1/Week1-2.pdf"
       - Week 1 Lecture 03: "Django/02-Building-Web-Applications-in-Django/Week1/Writing-your-first-Django-app-part-2.pdf"
@@ -152,6 +153,9 @@ nav:
       - Week 3 Quiz: "Django/02-Building-Web-Applications-in-Django/Week3/Quiz3.pdf"
       - Week 4 Lecture: "Django/02-Building-Web-Applications-in-Django/Week4/Writing-your-first-Django-app-part4.pdf"
       - Week 4 Quiz: "Django/02-Building-Web-Applications-in-Django/Week4/Quiz4.pdf"
+    - Gitlab:
+      - SSH: "gitlab/00-ssh.ipynb"
+      - Connect Gitlab using SSH: "gitlab/01-get-started.ipynb"
     - Streamlit:
       - APP: "https://gisyaliny.streamlit.app/"
     - Algorithm:
