@@ -158,6 +158,7 @@ nav:
       - Connect Gitlab using SSH: "gitlab/01-get-started.ipynb"
     - Streamlit:
       - APP: "https://gisyaliny.streamlit.app/"
+      - WebMap-JS: "https://gisyaliny.github.io/python/Geoprocessing/WestVirginiaGISTechnicalCenterWebMapping.html"
     - Algorithm:
       - Certificate: "Tree-and-Graph/Certificate.ipynb"
       - W1-Binary Tree And RedBlack Tree: "Tree-and-Graph/Week1-Binary-Tree-And-RedBlack-Tree.ipynb"
