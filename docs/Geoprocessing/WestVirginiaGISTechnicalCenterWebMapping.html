@@ -93,22 +93,21 @@
             var view = new MapView({
                 container: "viewDiv",
                 map: map,
-                zoom: 9,
+                zoom: 8,
                 center: [-79.955, 38.636]
             });
 
-            var peaksUrl = "https://services2.arcgis.com/VNo0ht0YPXJoI4oE/arcgis/rest/services/Recreational_Trails_of_West_Virginia/FeatureServer/0";
+            var peaksUrl = "https://services2.arcgis.com/VNo0ht0YPXJoI4oE/arcgis/rest/services/Trials/FeatureServer/0";
 
             var popupTemplate = {
-                title: "{OBJECTID}",
+                title: "Object ID: {OBJECTID}",
                 fieldInfos: [
-                    { fieldName: "StreamName", label: "Stream_Name", format: { places: 0, digitSeperator: false } },
+                    { fieldName: "trailName", label: "trailName", format: { places: 0, digitSeperator: false } },
                     { fieldName: "Shape__Length", label: "Trail_Length", format: { places: 0, digitSeperator: true } },
-                    { fieldName: "UrlID", label: "Url_ID", format: { places: 0, digitSeperator: false } },
-                    { fieldName: "Descriptio", label: "Description", format: { places: 0, digitSeperator: false } },
-                    { fieldName: "Enabled", label: "Enabled", format: { places: 0, digitSeperator: false } }
+                    { fieldName: "manageOrg", label: "manageOrg", format: { places: 0, digitSeperator: false } },
+                    { fieldName: "trailStatus", label: "trailStatus", format: { places: 0, digitSeperator: false } }
                 ],
-                content: "<b>Stream Name:</b> {StreamName} <br><b>Trail Length:</b> {Shape__Length}<br><b>Enabled:</b> {Enabled}<br><b>Description:</b> {Descriptio}"
+                content: "<b>Trail Name:</b> {trailName} <br><b>Trail Length:</b> {Shape__Length} Meter<br><b>Management Organization:</b> {manageOrg}<br><b>Trail Status:</b> {trailStatus}"
             };
 
             var featureLayer = new FeatureLayer({
@@ -146,7 +145,7 @@
             view.ui.add(legend, "top-left");
 
             // SQL query array
-            const parcelLayerSQL = ["Choose a SQL where clause...", "Enabled = 0", "Enabled = 1"];
+            const parcelLayerSQL = ["Choose a SQL where clause...", "hike = 'No'", "hike = 'Yes'", "bike = 'No'", "bike = 'Yes'", "horse = 'No'", "horse = 'Yes'"];
             let whereClause = parcelLayerSQL[0];
 
             // Add SQL UI
