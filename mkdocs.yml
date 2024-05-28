@@ -107,6 +107,11 @@ nav:
       - 05-Projecting data: "PostSQL/05-Projecting-Data.ipynb"
       - 06-Geopandas: "PostSQL/06-geopandas.ipynb"
       - Certificate: "PostSQL/Certificate.ipynb"
+    - PyQT:
+      - 01 Signals, Slots and Events: "PyQT/01-qt-signals.ipynb"
+      - 02 Widgets: "PyQT/02-qt-widgets.ipynb"
+      - 03 Layouts: "PyQT/03-qt-layout.ipynb"
+      - 04 Tooltips, Dialogs and Menu: "PyQT/04-Tooltips-dialogs-Menus.ipynb"
     - Geoprocessing:
       - 01 Arcpy Intro: "Geoprocessing/01-Arcpy-get-start.ipynb"
       - 02 Data Manipulation: "Geoprocessing/02-Data-Manipulation.ipynb"
