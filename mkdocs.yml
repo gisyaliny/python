@@ -112,11 +112,15 @@ nav:
       - 02 Widgets: "PyQT/02-qt-widgets.ipynb"
       - 03 Layouts: "PyQT/03-qt-layout.ipynb"
       - 04 Tooltips, Dialogs and Menu: "PyQT/04-Tooltips-dialogs-Menus.ipynb"
+      - 05 Qt Designer: "PyQT/05-qt-designer.ipynb"
     - Geoprocessing:
       - 01 Arcpy Intro: "Geoprocessing/01-Arcpy-get-start.ipynb"
       - 02 Data Manipulation: "Geoprocessing/02-Data-Manipulation.ipynb"
       - Optimal Tessellation: "Geoprocessing/Optimize-GSS-with-tessellation.ipynb"
       - Hexagon Shift: "Geoprocessing/Hexagon_shift.ipynb"
+      - JS01 Web Maps: "Geoprocessing/JS/01-get-started.ipynb"
+      - JS02 Layers and Widgets: "Geoprocessing/JS/02-manipulate-layers.ipynb"
+      - JS03 Spatial Query: "Geoprocessing/JS/03-spatial-query.ipynb"
     - PyTest:
       - 01-Unit-Test: "PyTest/01-Python-Unit-Test.ipynb"
       - 02 PyTest Get started: "PyTest/02-Pytest-get-started.ipynb"
