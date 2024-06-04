@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-  <title>West Virginia GIS Technical Center Web Mapping Programming Test (Yalin Yang)</title>
+  <title>Query a feature layer (SQL)</title>
   <style>
     html,
     body,
@@ -102,7 +102,7 @@
       const view = new MapView({
         container: "viewDiv",
         map: map,
-        zoom: 7,
+        zoom: 8,
         center: [-79.955, 38.636]
       });
 
@@ -150,8 +150,8 @@
       view.ui.add(select, "top-right");
 
       // save the query results
-      const resultsLayer = new GraphicsLayer();
-      map.add(resultsLayer);
+      // const resultsLayer = new GraphicsLayer();
+      // map.add(resultsLayer);
 
       // Listen for changes
       select.addEventListener('change', (event) => {
@@ -163,7 +163,7 @@
 
       function executeQuery(whereClause) {
         // Clear the result layer before performing a new query
-        resultsLayer.removeAll();
+        // resultsLayer.removeAll();
         // Set the new where clause
         params.where = whereClause;
 
@@ -173,7 +173,10 @@
             console.log("Feature count: " + results.features.length)
             // Copy all features into the results Layer
             results.features.forEach((feature) => {
-              resultsLayer.add(feature.clone());
+              //  resultsLayer.add(feature.clone());
+              view.graphics.removeAll();
+              // Add features to graphics layer
+              view.graphics.addMany(results.features);
             });
           })
           .catch((error) => {
