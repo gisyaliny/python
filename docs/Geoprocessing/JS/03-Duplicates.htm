@@ -1,17 +1,28 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title>ArcGIS JavaScript API Tutorial</title>
     <link rel="stylesheet" href="https://js.arcgis.com/4.25/esri/themes/light/main.css">
     <script src="https://js.arcgis.com/4.25/"></script>
     <style>
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+
         #viewDiv {
-            height: 100vh;
+            height: calc(100% - 50px);
             width: 100%;
             float: left;
             transition: width 0.3s ease;
         }
+
         #popupDiv {
             width: 300px;
             height: 100vh;
@@ -26,20 +37,53 @@
             transform: translateX(100%);
             opacity: 0;
         }
+
         #popupDiv.active {
             display: block;
             transform: translateX(0);
             opacity: 1;
         }
+
+        .header {
+            top: 0;
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(34, 111, 14, 0.5);
+            z-index: 10;
+        }
+
+        .btn-switch {
+            background-color: rgba(34, 111, 14, 0.5);
+            color: #fff;
+            margin: 1px;
+            width: 100px;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .active-map {
+            background-color: rgba(34, 111, 14, 1);
+        }
+
         .custom-search-widget {
             position: absolute;
             right: 15px;
-            top: 10px;
+            top: 60px;
+            /* Adjusted to avoid overlap with the header */
             z-index: 1;
         }
     </style>
 </head>
+
 <body>
+    <section class="header esri-widget">
+        <div class="btn-switch active-map" data-layer="trailheads">Trailheads</div>
+        <div class="btn-switch" data-layer="trails">Trails</div>
+    </section>
     <div id="viewDiv"></div>
     <div id="popupDiv"></div>
     <script>
@@ -98,8 +142,8 @@
             // Define a pop-up for Trailheads
             const popupTrailheads = {
                 "title": "Trailhead",
-                "content": 
-                "<b>Trail:</b> {TRL_NAME}<br>\
+                "content":
+                    "<b>Trail:</b> {TRL_NAME}<br>\
                 <b>City:</b> {CITY_JUR}<br>\
                 <b>Cross Street:</b> {X_STREET}<br>\
                 <b>Parking:</b> {PARKING}<br>\
@@ -111,7 +155,7 @@
                 url: "https://services3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/Trailheads/FeatureServer/0",
                 renderer: trailheadsRenderer,
                 labelingInfo: [trailheadsLabels],
-                outFields: ["TRL_NAME","CITY_JUR","X_STREET","PARKING","ELEV_FT"],
+                outFields: ["TRL_NAME", "CITY_JUR", "X_STREET", "PARKING", "ELEV_FT"],
                 popupTemplate: popupTrailheads
             });
 
@@ -145,7 +189,7 @@
                         type: "line-chart",
                         caption: "",
                         value: {
-                            fields: [ "ELEV_MIN","ELEV_MAX" ],
+                            fields: ["ELEV_MIN", "ELEV_MAX"],
                             normalizeField: null,
                             tooltipField: "Min and max elevation values"
                         }
@@ -157,7 +201,7 @@
                 url: "https://services3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/Trails/FeatureServer/0",
                 renderer: trailsRenderer,
                 opacity: 0.75,
-                outFields: ["TRL_NAME","ELEV_GAIN"],
+                outFields: ["TRL_NAME", "ELEV_GAIN"],
                 popupTemplate: popupTrails
             });
 
@@ -178,8 +222,8 @@
                 definitionExpression: "USE_BIKE = 'YES'"
             });
 
+            // Initial map setup with trailheads as default
             map.add(trailheads);
-            map.add(trailsLayer, 0);
             map.add(parksLayer, 0);
 
             // Widgets
@@ -187,7 +231,7 @@
                 view: view
             });
 
-            var locateWidget  = new Locate({
+            var locateWidget = new Locate({
                 view: view
             });
 
@@ -228,8 +272,8 @@
                 document.getElementById("viewDiv").style.width = "100%";
             }
 
-            view.on("click", function(event) {
-                view.hitTest(event).then(function(response) {
+            view.on("click", function (event) {
+                view.hitTest(event).then(function (response) {
                     if (response.results.length > 0) {
                         const filteredResults = response.results.filter((result) => {
                             return (
@@ -275,16 +319,39 @@
                     } else {
                         hidePopup();
                     }
-                }).catch(function(error) {
+                }).catch(function (error) {
                     console.error("Error in hitTest:", error);
                 });
             });
 
-            view.when().catch(function(error) {
+            view.when().catch(function (error) {
                 console.error("Error loading view:", error);
+            });
+
+            // Layer switching logic
+            document.querySelector(".header").addEventListener("click", function (event) {
+                const layer = event.target.getAttribute("data-layer");
+                if (layer === "trailheads") {
+                    map.remove(trailsLayer);
+                    map.add(trailheads);
+                } else if (layer === "trails") {
+                    map.remove(trailheads);
+                    map.add(trailsLayer);
+                }
+
+                // Update the active button style
+                const nodes = document.querySelectorAll(".btn-switch");
+                nodes.forEach(node => {
+                    if (node.getAttribute("data-layer") === layer) {
+                        node.classList.add("active-map");
+                    } else {
+                        node.classList.remove("active-map");
+                    }
+                });
             });
 
         });
     </script>
 </body>
+
 </html>

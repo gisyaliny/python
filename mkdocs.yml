@@ -165,8 +165,9 @@ nav:
     - Gitlab:
       - SSH: "gitlab/00-ssh.ipynb"
       - Connect Gitlab using SSH: "gitlab/01-get-started.ipynb"
-    - Streamlit:
-      - APP: "https://gisyaliny.streamlit.app/"
+    - Web Application:
+      - React: "React/01-get-started.ipynb"
+      - Streamlit APP: "https://gisyaliny.streamlit.app/"
       - WebMap-JS: "https://gisyaliny.github.io/python/Geoprocessing/WestVirginiaGISTechnicalCenterWebMapping.html"
     - Algorithm:
       - Certificate: "Tree-and-Graph/Certificate.ipynb"
