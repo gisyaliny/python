@@ -23,8 +23,8 @@
             const view = new MapView({
                 container: "viewDiv",
                 map: map,
-                center: [-118.80543, 34.02700],
-                zoom: 13
+                center: [-118.70543, 34.10700],
+                zoom: 12
             });
 
             const trailheadsRenderer = {
@@ -142,6 +142,35 @@
             map.add(trailheads);
             map.add(trailsLayer, 0);
             map.add(parksLayer, 0);
+
+            view.on("click", function (event) {
+                view.hitTest(event).then(function (response) {
+                  if (response.results.length > 0) {
+                    const graphic = response.results.filter((result) => {
+                      return (
+                        result.graphic.layer === trailheads ||
+                        result.graphic.layer === trailsLayer ||
+                        result.graphic.layer === parksLayer
+                      );
+                    })[0].graphic;
+              
+                    if (graphic) {
+                      view.goTo({
+                        target: graphic.geometry,
+                        zoom: 15,
+                      });
+              
+                      view.popup.open({
+                        features: [graphic],
+                        location: event.mapPoint,
+                      });
+                    }
+                  } else {
+                    view.goTo(originalView);
+                    view.popup.close();
+                  }
+                });
+              });
         });
     </script>
 </body>
