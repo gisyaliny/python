@@ -121,6 +121,8 @@ nav:
       - JS01 Web Maps: "Geoprocessing/JS/01-get-started.ipynb"
       - JS02 Layers and Widgets: "Geoprocessing/JS/02-manipulate-layers.ipynb"
       - JS03 Spatial Query: "Geoprocessing/JS/03-spatial-query.ipynb"
+      - ArcGIS Python API: "Geoprocessing/06-ArcGIS-Python-API.ipynb"
+      - Update WebLayer: "Geoprocessing/07-Updates-Weblayers.ipynb"
     - PyTest:
       - 01-Unit-Test: "PyTest/01-Python-Unit-Test.ipynb"
       - 02 PyTest Get started: "PyTest/02-Pytest-get-started.ipynb"
