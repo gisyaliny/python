@@ -113,6 +113,9 @@ nav:
       - 03 Layouts: "PyQT/03-qt-layout.ipynb"
       - 04 Tooltips, Dialogs and Menu: "PyQT/04-Tooltips-dialogs-Menus.ipynb"
       - 05 Qt Designer: "PyQT/05-qt-designer.ipynb"
+    - IT:
+      - 01 Batch Script: "IT/01-Batch.ipynb"
+      - 02 Shell Script: "IT/02-Shell.ipynb"
     - Geoprocessing:
       - 01 Arcpy Intro: "Geoprocessing/01-Arcpy-get-start.ipynb"
       - 02 Data Manipulation: "Geoprocessing/02-Data-Manipulation.ipynb"
