@@ -3,45 +3,27 @@
 
 {% block main-content %}
 
-<div class="container">
-    <h2>{{ user.username }}'s Profile</h2>
+<h2>User Profile</h2>
 
-    <div class="row mt-4">
-        <div class="col-md-4">
-            <h5>Profile Details</h5>
+<div class="content-section">
+    <div class="row">
+        <div class="col-md-3">
+            <img class="rounded-circle account-img" src="{{ user.userprofile.image.url }}" />
+        </div>
+        <div class="col-md-9">
+            <h2 class="account-heading">{{ user.username }}</h2>
+            <p class="text-secondary">{{ user.email }}</p>
             <ul class="list-group">
                 <li class="list-group-item">
-                    <strong>Username:</strong> {{ user.username }}
+                    <strong>Bio:</strong> {{ user.userprofile.bio }}
                 </li>
                 <li class="list-group-item">
-                    <strong>Email:</strong> {{ user.email }}
-                </li>
-                <li class="list-group-item">
-                    <strong>Bio:</strong> {{ user_profile.bio }}
-                </li>
-                <li class="list-group-item">
-                    <strong>Birth Date:</strong> {{ user_profile.birth_date|date:"F d, Y" }}
+                    <strong>Birth Date:</strong> {{ user.userprofile.birth_date|date:"F d, Y" }}
                 </li>
             </ul>
         </div>
-        <!--         
-        <div class="col-md-8">
-            <h5>Edit Profile</h5>
-            {% for message in messages %}
-            <div class="alert alert-{{ message.tags }}">
-                {{ message }}
-            </div>
-            {% endfor %}
-            <form method="POST">
-                {% csrf_token %}
-                {{ form|crispy }}
-                <div class="d-flex justify-content-end">
-                    <button type="submit" class="btn btn-primary me-2 mt-2">Update Profile</button>
-                    <a href="{% url 'blog-home' %}" class="btn btn-danger mt-2">Cancel</a>
-                </div>
-            </form>
-        </div> -->
     </div>
+    <!-- FORM HERE -->
 </div>
 
 {% endblock main-content %}
