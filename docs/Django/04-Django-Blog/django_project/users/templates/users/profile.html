@@ -23,7 +23,18 @@
             </ul>
         </div>
     </div>
-    <!-- FORM HERE -->
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Profile Info</legend>
+            {{ u_form|crispy }}
+            {{ p_form|crispy }}
+        </fieldset>
+        <div class="d-flex justify-content-end">
+            <button type="submit" class="btn btn-primary me-2 mt-2">Update</button>
+            <!-- <a href="{% url 'blog-home' %}" class="btn btn-danger">Cancel</a> -->
+        </div>
+    </form>
 </div>
 
 {% endblock main-content %}

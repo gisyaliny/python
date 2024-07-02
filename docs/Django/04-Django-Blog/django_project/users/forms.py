@@ -16,11 +16,18 @@ class UserRegisterForm(UserCreationForm):
         super().__init__(*args, **kwargs)
         self.helper = FormHelper()
         self.helper.add_input(Submit('register', 'Register'))
+        
+class UserUpdateForm(forms.ModelForm):
+    email = forms.EmailField()
+    
+    class Meta:
+        model = User
+        fields = ['username','email']
 
 class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
-        fields = ['bio', 'birth_date']
+        fields = ['bio','image','birth_date']
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
