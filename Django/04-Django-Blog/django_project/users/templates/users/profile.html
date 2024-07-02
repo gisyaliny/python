@@ -1,0 +1,40 @@
+{% extends "blog/main.html" %}
+{% load crispy_forms_tags %}
+
+{% block main-content %}
+
+<h2>User Profile</h2>
+
+<div class="content-section">
+    <div class="row">
+        <div class="col-md-3">
+            <img class="rounded-circle account-img" src="{{ user.userprofile.image.url }}" />
+        </div>
+        <div class="col-md-9">
+            <h2 class="account-heading">{{ user.username }}</h2>
+            <p class="text-secondary">{{ user.email }}</p>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <strong>Bio:</strong> {{ user.userprofile.bio }}
+                </li>
+                <li class="list-group-item">
+                    <strong>Birth Date:</strong> {{ user.userprofile.birth_date|date:"F d, Y" }}
+                </li>
+            </ul>
+        </div>
+    </div>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Profile Info</legend>
+            {{ u_form|crispy }}
+            {{ p_form|crispy }}
+        </fieldset>
+        <div class="d-flex justify-content-end">
+            <button type="submit" class="btn btn-primary me-2 mt-2">Update</button>
+            <!-- <a href="{% url 'blog-home' %}" class="btn btn-danger">Cancel</a> -->
+        </div>
+    </form>
+</div>
+
+{% endblock main-content %}
