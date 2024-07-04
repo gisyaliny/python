@@ -162,6 +162,8 @@ nav:
       - Blog Project 02: "Django/04-Django-Blog/02-database-and-admin.ipynb"
       - Blog Project 03: "Django/04-Django-Blog/03-user-registration.ipynb"
       - Blog Project 04: "Django/04-Django-Blog/04-post-crud.ipynb"
+      - Blog Project 06: "Django/04-Django-Blog/06-rest-api.ipynb"
+      - Blog Project 07: "Django/04-Django-Blog/07-deploy.ipynb"
       - Certificate: "Django/02-Building-Web-Applications-in-Django/Certificate.ipynb"
   - Gitlab:
       - SSH: "gitlab/00-ssh.ipynb"
