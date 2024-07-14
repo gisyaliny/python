@@ -140,6 +140,7 @@ nav:
       - 06 PyTest Mocking: "PyTest/06-Pytest-Mocking.ipynb"
   - Web application and Tech:
       - Certificate: "Django/01-Web-Application-Technologies-and-Django/Certificate.ipynb"
+      - WVU Maps: "Geoprocessing/JS/app/index.html"
       - Week 1 Lecture: "Django/01-Web-Application-Technologies-and-Django/Week1/Lecture01.pdf"
       - Week 1 Notes: "Django/01-Web-Application-Technologies-and-Django/Week1/Week1.ipynb"
       - Week 1 Django Intro: "Django/01-Web-Application-Technologies-and-Django/Week1/Week1-Intro-Django.pdf"
